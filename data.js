@@ -2,7 +2,7 @@ export const questions = [
     {
         "question": "Whats your name?",
         "type": "radio",
-        "options": ["Mohamed", "Asif", "Abdul", "Azeez"]
+        "options": ["Mohamed", "Asif", "Manoj", "Kumar"]
     },
     {
         "question": "Whats your age?",
