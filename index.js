@@ -139,18 +139,18 @@ const displayAnswers = () => {
             }
         
         const val = questions[i].options[j]
-        let checked = false
+        let checked = ""
 
         // If options are already checked
         if (questions[i].answer.includes(val)){
-            checked = true
+            checked = "checked"
         }
 
         const opt = document.createElement(`div`)
         opt.className = "margin-10"
         opt.innerHTML = 
-        `<input type="${questions[i].type}" id="${option}" name="answer" value="${val}" ${checked && "checked"} disabled/>
-        <label id="${option}_label" for="${option}"> <span id="option" >(${op}) </span>${val}</label>
+        `<input type="${questions[i].type}" id="${option}" name="answer${i}" value="${val}" ${checked} disabled/>
+        <label id="${option}_label" > <span id="option" >(${op}) </span>${val}</label>
         `
         document.getElementById('success').appendChild(opt)
         }
@@ -184,6 +184,7 @@ const setCheckedOption = () => {
             // console.log(options[i].value)
             current_grid_item.classList.add('answered-grid-cell')
             questions[index].answer.push(options[i].value)
+            // console.log(questions)
         }
     }
 }
