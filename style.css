@@ -196,6 +196,10 @@ footer {
     color: gainsboro;
 }
 
+#submit {
+    margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 600px) 
 {
     
@@ -245,5 +249,16 @@ footer {
     }
 
 
+
+}
+
+@media only screen and (max-width: 950px){
+    section {
+        margin: 100px 40px;
+    }
+
+    .navbar {
+        padding: 0px 40px;
+    }
 
 }
